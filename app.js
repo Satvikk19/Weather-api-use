@@ -12,7 +12,7 @@ app.get("/",function(req, res){
 app.post("/", function(req,res){
     console.log(req.body.cityName);
     const query= req.body.cityName;
-    const id= "832d806d14da58ae3f28f5f3610c6dc5";
+    //id is removed from this place as it is api key. Please use your own api over here.
     const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+id+"&units=metric"
     https.get(url, function(response){
         console.log(response.statusCode);
